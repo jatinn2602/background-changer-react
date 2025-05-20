@@ -4,9 +4,12 @@ import './index.css'
 
 function App() {
 let [color,setColor]= useState("black")  
+const textColor = color === "black" ? "white" : "black";
 return (<>
   <div className='w-full h-screen duration-200 '
-  style={{backgroundColor: color}}> <h1 className='flex justify-center text-5xl font-bold pt-6 duration-100'>Mini Background Changer Project</h1>
+  style={{backgroundColor: color}}> <h1 
+  style={{color: textColor}}
+  className='flex justify-center text-5xl font-bold pt-6 duration-100'>Mini Background Changer Project</h1>
   <p className='flex justify-center m-3.5 text-2xl italic'>With the help of React we can change the background color.</p>
     <div className='fixed flex flex-wrap bottom-13 justify-center inset-x-0 px-2'>
       <div className='bg-white flex flex-wrap justify-center gap-3 shadow-lg px-3 py-2 rounded-full'>
